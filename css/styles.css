@@ -649,6 +649,7 @@ ul {
 
 .footer-container {
     display: flex;
+    gap: 93px;
 }
 
 
@@ -688,8 +689,4 @@ ul {
 
 .footer-social-link:hover {
     background-color: var(--hover-color);
-}
-
-.footer-wrapper {
-    margin-right: 70px;
 }
