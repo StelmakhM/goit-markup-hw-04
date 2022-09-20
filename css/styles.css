@@ -439,8 +439,6 @@ ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-
-
 }
 
 
@@ -450,7 +448,6 @@ ul {
     height: 92px;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
-
 }
 
 .clients-item a:focus .icon-client,
@@ -483,13 +480,11 @@ ul {
 .company3 {
     width: 43px;
     height: 41px;
-
 }
 
 .company4 {
     width: 84px;
     height: 40px;
-
 }
 
 .company5 {
