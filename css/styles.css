@@ -13,6 +13,7 @@
     --social-media-color: #AFB1B8;
     --social-fill-color: #2196F3;
     --footer-social-color: rgba(255, 255, 255, 0.1);
+    --icon-background: #F5F4FA;
 }
 
 *,
@@ -140,7 +141,7 @@ ul {
     text-decoration: none;
 }
 
-.contacts-item {
+.contacts-link {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -155,7 +156,6 @@ ul {
 
 .icon {
     display: block;
-    margin: auto;
 
 }
 
@@ -175,7 +175,8 @@ ul {
     fill: var(--contacts-color);
 }
 
-.contacts-list>li:hover a {
+.contacts-link:hover,
+.contacts-link:focus {
     color: var(--hover-color);
 }
 
@@ -280,27 +281,14 @@ ul {
     margin-bottom: 30px;
     width: 270px;
     height: 120px;
-    background-color: #F5F4FA;
     border-radius: 4px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-background);
 }
 
-.antenna {
-    width: 65px;
-    height: 70px;
-}
-
-.clock {
-    width: 67px;
-    height: 70px;
-}
-
-.diagram {
-    width: 70px;
-    height: 54px;
-}
-
-.astronaut {
+.icon-feature {
     width: 70px;
     height: 70px;
 }
@@ -344,7 +332,6 @@ ul {
 }
 
 .team-list>li {
-    padding-bottom: 30px;
     background-color: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -366,8 +353,13 @@ ul {
     letter-spacing: 0.03em;
 }
 
+.team-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .member-photo {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .member-name {
@@ -403,11 +395,12 @@ ul {
     width: 20px;
     height: 20px;
     fill: var(--social-media-color);
-    margin: auto;
 }
 
 .social-link {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -441,62 +434,38 @@ ul {
     justify-content: space-between;
 }
 
-
-.clients-item a {
-    display: flex;
+.clients-item {
     width: 170px;
     height: 92px;
+
+
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
 }
 
-.clients-item a:focus .icon-client,
-.clients-item a:hover .icon-client {
+
+.clients-link:hover .icon-client {
     fill: var(--social-fill-color);
 }
 
-.clients-item:hover a {
+.clients-link:hover {
     border: 1px solid var(--social-fill-color);
 }
 
 
 .icon-client {
-    margin: auto;
+    width: 106px;
+    height: 60px;
     fill: var(--social-media-color);
 }
-
-
-.company1 {
-    width: 41px;
-    height: 47px;
-}
-
-
-.company2 {
-    width: 40px;
-    height: 52px;
-}
-
-.company3 {
-    width: 43px;
-    height: 41px;
-}
-
-.company4 {
-    width: 84px;
-    height: 40px;
-}
-
-.company5 {
-    width: 62px;
-    height: 45px;
-}
-
-.company6 {
-    width: 94px;
-    height: 44px;
-}
-
 
 
 /* Main portfolio.html */
@@ -565,16 +534,19 @@ ul {
     flex-wrap: wrap;
 }
 
-.product-list li {
+.product-item {
     background: #fff;
 }
 
-.product-list li:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.product-link:hover,
+.product-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.product-item {
+.product-link {
     text-decoration: none;
+    display: block;
 
 }
 
@@ -649,18 +621,24 @@ ul {
 
 .footer-container {
     display: flex;
-    gap: 93px;
+    align-items: baseline;
 }
 
 
 .footer-social {
-    padding-top: 12px;
+    margin-left: 70px;
+
 }
 
 .footer-social-list {
     display: flex;
     list-style: none;
     gap: 10px;
+}
+
+.footer-social-list li {
+    width: 44px;
+    height: 44px;
 }
 
 .footer-social-title {
@@ -676,13 +654,14 @@ ul {
     width: 20px;
     height: 20px;
     fill: var(--accessory-color);
-    margin: auto;
 }
 
 .footer-social-link {
     display: flex;
-    width: 44px;
-    height: 44px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--footer-social-color);
 }
