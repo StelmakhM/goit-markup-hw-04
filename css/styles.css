@@ -73,6 +73,14 @@ ul {
     padding: 0;
 }
 
+a {
+    outline: none;
+}
+
+button {
+    outline: none;
+}
+
 
 /* Header */
 
@@ -123,6 +131,7 @@ ul {
     list-style: none;
     display: flex;
     margin-left: auto;
+
 }
 
 .contacts-list li {
@@ -142,6 +151,8 @@ ul {
 }
 
 .contacts-link {
+    display: flex;
+    align-items: center;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -163,16 +174,14 @@ ul {
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    cursor: pointer;
-    fill: var(--contacts-color);
+    fill: currentColor;
 }
 
 .icon-phone {
     width: 10px;
     height: 16px;
     margin-right: 10px;
-    cursor: pointer;
-    fill: var(--contacts-color);
+    fill: currentColor;
 }
 
 .contacts-link:hover,
@@ -180,13 +189,6 @@ ul {
     color: var(--hover-color);
 }
 
-.contacts-list>li:hover .icon-mail {
-    fill: var(--hover-color);
-}
-
-.contacts-list>li:hover .icon-phone {
-    fill: var(--hover-color);
-}
 
 /* Main index.html */
 
@@ -394,7 +396,7 @@ ul {
 .icon-social {
     width: 20px;
     height: 20px;
-    fill: var(--social-media-color);
+    fill: currentColor;
 }
 
 .social-link {
@@ -404,13 +406,16 @@ ul {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--social-media-color);
 }
 
-.social-link:hover .icon-social {
-    fill: var(--accessory-color)
+.social-link:hover,
+.social-link:focus {
+    color: var(--accessory-color);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     background-color: var(--social-fill-color);
 }
 
@@ -449,13 +454,16 @@ ul {
     height: 100%;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
+    color: var(--social-media-color);
 }
 
 
-.clients-link:hover .icon-client {
-    fill: var(--social-fill-color);
+.clients-link:focus,
+.clients-link:hover {
+    color: var(--social-fill-color);
 }
 
+.clients-link:focus,
 .clients-link:hover {
     border: 1px solid var(--social-fill-color);
 }
@@ -464,7 +472,7 @@ ul {
 .icon-client {
     width: 106px;
     height: 60px;
-    fill: var(--social-media-color);
+    fill: currentColor;
 }
 
 
@@ -605,6 +613,11 @@ ul {
     text-decoration: none;
 }
 
+.footer-location:focus,
+.footer-location:hover {
+    color: var(--hover-color);
+}
+
 .footer-contacts {
     font-style: normal;
     font-weight: 400;
@@ -653,7 +666,7 @@ ul {
 .footer-icon-social {
     width: 20px;
     height: 20px;
-    fill: var(--accessory-color);
+    fill: currentColor;
 }
 
 .footer-social-link {
@@ -664,8 +677,10 @@ ul {
     height: 100%;
     border-radius: 50%;
     background-color: var(--footer-social-color);
+    color: var(--accessory-color);
 }
 
+.footer-social-link:focus,
 .footer-social-link:hover {
     background-color: var(--hover-color);
 }
